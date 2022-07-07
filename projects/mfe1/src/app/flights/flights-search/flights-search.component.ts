@@ -6,9 +6,10 @@ import {Component} from '@angular/core';
   styleUrls: ['./flights-search.component.css']
 })
 export class FlightsSearchComponent {
+  showLazyButton = false;
 
   search(): void {
-    alert('Not implemented for this demo!');
+    this.showLazyButton = true;
   }
 
   terms(): void {
