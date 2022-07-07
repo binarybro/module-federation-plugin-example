@@ -82,7 +82,8 @@
 					"options": {
 						"port": 4200,
 						"publicHost": "http://localhost:4200",
-						"extraWebpackConfig": "projects/shell/webpack.config.js"
+						"extraWebpackConfig": "projects/shell/webpack.config.js",
+            "proxyConfig": "projects/shell/proxy.conf.json"
 					}
 				},
 				"extract-i18n": {
@@ -219,5 +220,8 @@
 				}
 			}
 		}
-	}
+  },
+  "cli": {
+    "analytics": "1a9e124f-ef78-4081-bbbb-5da20fddf757"
+  }
 }
