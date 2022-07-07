@@ -5,6 +5,7 @@ import {Component, ViewChild, ViewContainerRef, Inject, Injector, ComponentFacto
   templateUrl: './flights-search.component.html'
 })
 export class FlightsSearchComponent {
+  showLazyButton = false;
 
   @ViewChild('vc', { read: ViewContainerRef, static: true })
   viewContainer: ViewContainerRef;
@@ -14,7 +15,7 @@ export class FlightsSearchComponent {
     @Inject(ComponentFactoryResolver) private cfr) { }
 
   search(): void {
-    alert('Not implemented for this demo!');
+    this.showLazyButton = true;
   }
 
   terms(): void {
