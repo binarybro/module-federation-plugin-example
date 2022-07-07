@@ -43,8 +43,7 @@ module.exports = {
       name: "mfe1",
       filename: "remoteEntry.js",
       exposes: {
-        // Update this:
-        './Module': './projects/mfe1/src/app/flights/flights.module.ts',
+        './Module': './projects/mfe1/src/app/flights/flights.module.ts'
       },
       shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },

@@ -80,9 +80,10 @@
 					},
 					"defaultConfiguration": "development",
 					"options": {
-						"port": 5000,
-						"publicHost": "http://localhost:5000",
-						"extraWebpackConfig": "projects/shell/webpack.config.js"
+						"port": 4200,
+						"publicHost": "http://localhost:4200",
+						"extraWebpackConfig": "projects/shell/webpack.config.js",
+            "proxyConfig": "projects/shell/proxy.conf.json"
 					}
 				},
 				"extract-i18n": {
@@ -188,8 +189,8 @@
 					},
 					"defaultConfiguration": "development",
 					"options": {
-						"port": 3000,
-						"publicHost": "http://localhost:3000",
+						"port": 4201,
+						"publicHost": "http://localhost:4201",
 						"extraWebpackConfig": "projects/mfe1/webpack.config.js"
 					}
 				},

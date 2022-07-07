@@ -42,7 +42,7 @@ module.exports = {
         // },
 
       remotes: {
-        'mfe1': "http://localhost:3000/remoteEntry.js"
+        "mfe1": "./remotes/mfe1/remoteEntry.js",
       },
       shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
