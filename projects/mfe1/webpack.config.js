@@ -26,19 +26,19 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-        library: { type: "module" },
+      library: {type: "module"},
 
-        // For remotes (please adjust)
-        // name: "mfe1",
-        // filename: "remoteEntry.js",
-        // exposes: {
-        //     './Component': './projects/mfe1/src/app/app.component.ts',
-        // },
+      // For remotes (please adjust)
+      // name: "mfe1",
+      // filename: "remoteEntry.js",
+      // exposes: {
+      //     './Component': './projects/mfe1/src/app/app.component.ts',
+      // },
 
-        // For hosts (please adjust)
-        // remotes: {
-        //     "shell": "http://localhost:5000/remoteEntry.js",
-        // },
+      // For hosts (please adjust)
+      // remotes: {
+      //     "shell": "http://localhost:5000/remoteEntry.js",
+      // },
 
       name: "mfe1",
       filename: "remoteEntry.js",
@@ -46,13 +46,13 @@ module.exports = {
         './Module': './projects/mfe1/src/app/flights/flights.module.ts'
       },
       shared: share({
-          "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
-          "@angular/router": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
+        "@angular/core": {singleton: true, strictVersion: false, requiredVersion: '^13'},
+        "@angular/common": {singleton: true, strictVersion: false, requiredVersion: '^13'},
+        "@angular/common/http": {singleton: true, strictVersion: false, requiredVersion: '^13'},
+        "@angular/router": {singleton: true, strictVersion: false, requiredVersion: '^13'},
 
-          ...sharedMappings.getDescriptors()
-        })
+        ...sharedMappings.getDescriptors()
+      })
 
     }),
     sharedMappings.getPlugin()
