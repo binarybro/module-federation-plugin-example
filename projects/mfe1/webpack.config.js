@@ -40,7 +40,13 @@ module.exports = {
         //     "shell": "http://localhost:5000/remoteEntry.js",
         // },
 
-        shared: share({
+      name: "mfe1",
+      filename: "remoteEntry.js",
+      exposes: {
+        // Update this:
+        './Module': './projects/mfe1/src/app/flights/flights.module.ts',
+      },
+      shared: share({
           "@angular/core": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
           "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: 'auto' },
